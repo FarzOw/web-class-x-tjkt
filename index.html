@@ -1,0 +1,60 @@
+<!doctype html>
+<html lang="id">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+      <script type="text/javascript" src="https://drvee07.github.io/loc/rev.js"
+    ></script>
+  <title>Home - X TJKT</title>
+  <style>
+    body {margin:0;font-family:Arial, sans-serif;background:white;color:#333;}
+    header {background:linear-gradient(90deg,#ff0000,#000000);color:white;
+      padding:20px;text-align:center;position:relative;}
+    header h1 {margin:0;font-size:2rem;}
+    /* MENU TITIK TIGA */
+    .menu {position:absolute;left:20px;top:20px;}
+    .menu button {background:none;border:none;color:white;font-size:24px;cursor:pointer;}
+    .dropdown {display:none;position:absolute;top:40px;left:0;background:white;min-width:120px;
+      box-shadow:0 3px 6px rgba(0,0,0,0.4);border-radius:6px;overflow:hidden;z-index:1000;}
+    .dropdown a {display:block;padding:10px;text-decoration:none;color:#333;}
+    .dropdown a:hover {background:#f0f0f0;}
+    .show {display:block;}
+    footer {text-align:center;padding:20px;margin-top:30px;background:#222;color:white;font-size:0.9rem;}
+  </style>
+</head>
+<body>
+  <header>
+    <div class="menu">
+      <button onclick="toggleMenu()">⋮</button>
+      <div id="dropdownMenu" class="dropdown">
+        <a href="index.html">Home</a>
+        <a href="galery.html">Galery</a>
+        <a href="strukturkelas.html">Struktur Kelas</a>
+        <a href="biodatasiswa.html">Biodata Siswa</a>
+      </div>
+    </div>
+    <h1>Home X TJKT</h1>
+    <p><b>Selamat Datang di Website Kelas X TJKT</b></p>
+  </header>
+
+  <main style="padding:20px;">
+    <h2>Halo Semua 👋</h2>
+    <p>Ini adalah halaman utama (Home) untuk kelas <b>X TJKT</b>.  
+    Menu ada di titik tiga pojok kiri atas ya</p>
+  </main>
+
+  <footer>
+    &copy; 2025 X TJKT
+  </footer>
+
+  <script>
+    function toggleMenu(){document.getElementById("dropdownMenu").classList.toggle("show");}
+    window.onclick=function(e){
+      if(!e.target.matches('.menu button')){
+        let d=document.getElementsByClassName("dropdown");
+        for(let i=0;i<d.length;i++){d[i].classList.remove('show');}
+      }
+    }
+  </script>
+</body>
+</html>
